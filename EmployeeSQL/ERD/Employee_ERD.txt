@@ -1,0 +1,41 @@
+# ERD 
+
+Departments
+------
+dept_no VARCHAR(15) PK
+dept_name VARCHAR(50) 
+
+Dept_Emp
+------
+emp_no INTEGER PK FK >- Employees.emp_no
+dept_no VARCHAR(15) PK FK >- Departments.dept_no
+
+Dept_Manager
+------
+dept_no VARCHAR(15) PK FK >- Departments.dept_no
+emp_no INTEGER PK FK >- Employees.emp_no
+
+Employees
+------
+emp_no INTEGER PK
+emp_title_id VARCHAR(20) FK >- Titles.title_id
+birth_date DATE
+first_name VARCHAR(50)
+last_name VARCHAR(50)
+sex VARCHAR(10)
+hire_date DATE
+
+Salaries
+------
+emp_no INTEGER PK FK >- Employees.emp_no
+salary INTEGER
+
+Titles
+------
+title_id VARCHAR(20) PK
+title VARCHAR(50)
+
+
+
+
+
